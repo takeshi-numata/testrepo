@@ -1,0 +1,58 @@
+# ============================================
+# Data Mart Generation System Configuration
+# ============================================
+
+# Database Connection Info
+databases:
+  central_warehouse:
+    host: localhost
+    port: 5432
+    database: central_warehouse
+    user: cwh_user
+    password: cwh_pass
+    
+  data_mart:
+    host: localhost
+    port: 5433
+    database: data_mart
+    user: dm_user
+    password: dm_pass
+    
+  vector_db:
+    host: localhost
+    port: 5434
+    database: metadata_db
+    user: vector_user
+    password: vector_pass
+
+# Ollama Configuration
+ollama:
+  base_url: http://localhost:11434
+  model: qwen2.5-coder:7b-instruct
+  timeout: 300
+  options:
+    temperature: 0.1
+    top_p: 0.9
+    num_ctx: 32768  # Context length
+
+# Vectorizer Configuration
+vectorizer:
+  model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+  dimension: 384
+  batch_size: 32
+
+# Prompt Templates
+prompts:
+  ddl_template: config/prompts/ddl_prompt.md
+  dml_template: config/prompts/dml_prompt.md
+
+# Output Configuration
+output:
+  ddl_dir: data/output/ddl
+  dml_dir: data/output/dml
+  log_dir: data/output/logs
+
+# Logging
+logging:
+  level: INFO
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'

@@ -1,0 +1,27 @@
+# Database
+psycopg2-binary==2.9.9
+pgvector==0.2.4
+SQLAlchemy==2.0.23
+
+# AI & Machine Learning
+ollama==0.1.6
+sentence-transformers==2.2.2
+torch==2.1.2
+
+# Data Processing
+pandas==2.1.4
+openpyxl==3.1.2
+numpy==1.26.2
+
+# Utilities
+PyYAML==6.0.1
+python-dotenv==1.0.0
+pydantic==2.5.3
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+faker==21.0.0
+
+# Logging & Monitoring
+loguru==0.7.2
